@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
         color: '#FFF',
         fontWeight: 'bold',
         fontSize: 12,
+        textTransform: 'uppercase',
     }
 })
 

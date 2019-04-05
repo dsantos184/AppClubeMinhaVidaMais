@@ -20,13 +20,13 @@ export default class Pesquisar extends Component
                 <TextInpuMask                    
                     style={styles.inputPesquisar} 
                     onChangeText={(value) => this.props.cpf(value)}
-                    placeholder='Digite o CPF'
-                    mask={'[000].[000].[000]-[00]'}
+                    placeholder={this.props.placeholder}
+                    mask={this.props.maskInput}
                 />
 
                 <TouchableOpacity style={styles.btnPesquisar} onPress={()=>{}}>
-                    <Image source={require('../../img/icon-pesquisar.png')}  style={styles.icon}/>
-                    <Text style={styles.textBtnPesquisar}>PESQUISAR</Text>
+                    <Image source={this.props.icon}  style={styles.icon}/>
+                    <Text style={styles.textBtnPesquisar}>{this.props.textButton}</Text>
                 </TouchableOpacity>
 
             </View>

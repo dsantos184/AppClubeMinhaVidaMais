@@ -7,6 +7,7 @@ import{
 import BarraSuperior from '../components/BarraSuperior/index'
 import Pesquisar from '../components/Pesquisar/index'
 import styles from './style'
+import Feedback from '../components/Feedback/index'
 
 export default class Parceiro extends Component
 {
@@ -30,16 +31,27 @@ export default class Parceiro extends Component
         return(
             <View style={styles.container}>
                 
-                <BarraSuperior title='Consultar de CPF'/>
+                <BarraSuperior title='Consultar CPF'/>
                 
                 <View style={styles.conteudo}>
-                    <Pesquisar cpf={value => {
-                        this.setCpf(value);
-                    }}/>
+                    
+                    <Pesquisar 
+                        cpf={value => {
+                            this.setCpf(value);
+                        }}
+                        maskInput = '[000].[000].[000]-[00]'
+                        icon = {require('../img/icon-pesquisar.png')}
+                        textButton = 'Pesquisar'
+                        placeholder = 'Digite o CPF'
+                    />
+                    
+                    <View style={styles.containerResultado}>
+                        <Feedback/>
+                        
+                    </View>
+
                 </View>
 
-                <Text>{this.state.cpf}</Text>
-    
             </View>
         )
     }
