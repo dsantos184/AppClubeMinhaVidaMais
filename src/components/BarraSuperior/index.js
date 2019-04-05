@@ -4,11 +4,12 @@ import{
     Text,
     Image
 } from 'react-native'
-import style from './style';
+import styles from './style';
 
 const BarraSuperior = (props) => (
-    <View style={style.containerBarra}>
+    <View style={styles.containerBarra}>
         <Image style={styles.logo} source={require('../../img/logo.png')} />
+        <Text style={styles.titleBarraSuperior}>{props.title}</Text>
     </View>
 )
 

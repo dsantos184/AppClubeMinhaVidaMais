@@ -1,5 +1,3 @@
-import React, {Component} from 'react';
-import { StyleSheet, Text, View} from 'react-native';
 import  {createBottomTabNavigator, createAppContainer} from 'react-navigation'
 
 import Parceiro from './Parceiro/index'

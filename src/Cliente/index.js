@@ -5,12 +5,12 @@ import{
 } from 'react-native'
 
 import BarraSuperior from '../components/BarraSuperior/index'
+import Pesquisar from '../components/Pesquisar/index'
 
 const Cliente = (props) => {
     return(
         <View>
             <BarraSuperior/>
-            <Text>Cliente</Text>
         </View>
     )
 }
